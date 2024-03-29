@@ -1,13 +1,13 @@
 //your JS code here. If required.
 function updateSize() {
-    const width = window.innerWidth;
-    const height = window.innerHeight;
-    document.getElementById('width').textContent = width;
-    document.getElementById('height').textContent = height;
-}
+        const width = window.innerWidth;
+        const height = window.innerHeight;
+        document.getElementById('width').textContent = width;
+        document.getElementById('height').textContent = height;
+    }
 
-// Initial call to update the size
-updateSize();
+    // Update size when the window is resized
+    window.addEventListener('resize', updateSize);
 
-// Add event listener for window resize event
-window.addEventListener('resize', updateSize);
+    // Initial update
+    updateSize();
